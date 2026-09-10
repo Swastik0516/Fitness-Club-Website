@@ -50,12 +50,15 @@ body {
 
 .btn {
     display: block;
+    width: 100%;
     background-color: red;
     color: white;
     text-decoration: none;
     padding: 12px;
     margin-bottom: 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn:hover {
