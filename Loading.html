@@ -1,93 +1,106 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FitClub | Loading</title>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
 
-    body {
-        height: 100vh;
-        background: #1a1a2e;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        color: white;
-    }
-
-    .loading-container {
-        text-align: center;
-    }
-
-    .loader {
-        width: 120px;
-        height: 120px;
-        border: 8px solid #444;
-        border-top: 8px solid #e63946;
-        border-radius: 50%;
-        position: relative;
-        animation: rotate 2s linear infinite;
-        margin: auto;
-    }
-
-    .ball {
-        width: 20px;
-        height: 20px;
-        background: #e63946;
-        border-radius: 50%;
-        position: absolute;
-        top: -14px;
-        left: 42px;
-    }
-
-    .loading-container h1 {
-        margin-top: 30px;
-        font-size: 32px;
-    }
-
-    .loading-container p {
-        margin-top: 10px;
-        color: #ccc;
-        font-size: 16px;
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        to {
-            transform: rotate(360deg);
+        body {
+            height: 100vh;
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
         }
-    }
-</style>
+
+        .loading-container {
+            text-align: center;
+        }
+
+        .loader {
+            width: 120px;
+            height: 120px;
+            border: 8px solid #444;
+            border-top: 8px solid #e63946;
+            border-radius: 50%;
+            position: relative;
+            animation: rotate 2s linear infinite;
+            margin: auto;
+        }
+
+        .ball {
+            width: 20px;
+            height: 20px;
+            background: #e63946;
+            border-radius: 50%;
+            position: absolute;
+            top: -14px;
+            left: 42px;
+        }
+
+        .loading-container h1 {
+            margin-top: 30px;
+            font-size: 32px;
+        }
+
+        .loading-container p {
+            margin-top: 10px;
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        @keyframes rotate {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<div class="loading-container">
+    <div class="loading-container">
 
-    <div class="loader">
-        <div class="ball"></div>
+        <div class="loader">
+            <div class="ball"></div>
+        </div>
+
+        <h1>FitClub Website</h1>
+
+        <p>Loading...</p>
+
     </div>
 
-    <h1>FitClub Website</h1>
-    <p>Loading...</p>
 
-</div>
+    <script>
 
-<script>
-    setTimeout(function() {
-        window.location.href = "Home.html";
-    }, 5000);
-</script>
+        setTimeout(function() {
+            window.location.href = "Login.html";
+        }, 5000);
+
+    </script>
+
 </body>
+
 </html>

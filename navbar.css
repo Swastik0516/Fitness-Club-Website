@@ -1,7 +1,6 @@
-/* css/navbar.css */
 header {
     background-color: black;
-    padding: 28px;
+    padding: 30px;
 }
 
 .navbar {
@@ -35,4 +34,26 @@ header {
 .nav-links li a:hover,
 .nav-links li a.active {
     color: red;
+}
+
+
+/* Responsive for mobile */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
 }

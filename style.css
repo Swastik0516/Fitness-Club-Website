@@ -32,3 +32,22 @@ body {
     margin-bottom: 40px;
     color: #222;
 }
+
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}

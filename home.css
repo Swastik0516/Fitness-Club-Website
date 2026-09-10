@@ -1,5 +1,3 @@
-/* css/home.css */
-
 .hero {
     height: 80vh;
     background: grey;
@@ -18,4 +16,24 @@
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 25px;
+}
+
+
+/* Responsive for mobile */
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 70vh;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
 }

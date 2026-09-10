@@ -1,50 +1,46 @@
-/* css/membership.css */
-
 .pricing-section {
-    padding: 40px 0;
+padding: 40px 0;
 }
 
 .pricing-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+display: flex;
+justify-content: center;
+gap: 20px;
 }
 
 .pricing-card {
-    background: white;
-    padding: 40px;
-    text-align: center;
-    width: 300px;
-    border: 1px solid grey;
+background: white;
+padding: 25px;
+width: 250px;
+text-align: center;
+border: 1px solid #ddd;
 }
 
 .pricing-card h3 {
-    font-size: 1.5rem;
-    color: black;
+color: #333;
 }
 
 .pricing-card .price {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: red;
-    margin: 20px 0;
+font-size: 30px;
+font-weight: bold;
+color: red;
+margin: 15px 0;
 }
 
 .pricing-card .price span {
-    font-size: 1rem;
-    color: grey;
+font-size: 15px;
+color: gray;
 }
 
 .pricing-card ul {
-    list-style: none;
-    margin-bottom: 25px;
+list-style: none;
+padding: 0;
 }
 
-.pricing-card ul li {
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+.pricing-card li {
+margin: 10px 0;
 }
 
 .pricing-card.premium {
-    border: 2px solid red;
+border: 2px solid red;
 }
