@@ -2,14 +2,12 @@
 
 .hero {
     height: 80vh;
-
     background: grey;
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: white;
 }
 
 .hero-content h1 {
@@ -21,4 +19,3 @@
     font-size: 1.2rem;
     margin-bottom: 25px;
 }
-
