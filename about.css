@@ -1,11 +1,11 @@
 .about-section {
-    min-height: 80vh;
+    min-height: 69.9vh;
     padding: 40px 0;
 }
 
 .section-title {
     font-size: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
@@ -34,18 +34,11 @@
     flex: 1;
 }
 
-.img-placeholder {
+.about-image img {
     width: 100%;
     height: 300px;
-    background-color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    object-fit: cover;
     border-radius: 10px;
-    color: grey;
-    font-weight: bold;
 }
 
 
@@ -79,7 +72,7 @@
         font-size: 16px;
     }
 
-    .img-placeholder {
+    .about-image img {
         height: 250px;
     }
 

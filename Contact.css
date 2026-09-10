@@ -1,17 +1,17 @@
 .contact-section {
-    padding: 40px 0;
+    padding: 66px 0;
 }
 
 .section-title {
     text-align: center;
-    font-size: 35px;
+    font-size: 46px;
     margin-bottom: 30px;
 }
 
 .contact-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
 }
 
 .contact-info {
@@ -19,15 +19,15 @@
 }
 
 .contact-info h2 {
-    font-size: 25px;
+    font-size: 40px;
     color: red;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .contact-info p {
-    font-size: 17px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .contact-form {
@@ -41,7 +41,7 @@
 
 .contact-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 17.5px;
 }
 
 .contact-form input,
