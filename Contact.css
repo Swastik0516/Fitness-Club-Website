@@ -1,0 +1,99 @@
+/* css/Contact.css */
+
+.contact-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-info h2 {
+    font-size: 25px;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    width: 40%;
+}
+
+.contact-form h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid grey;
+}
+
+.contact-form button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+
+/* Tablet */
+
+@media (max-width: 992px) {
+
+    .contact-grid {
+        gap: 25px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 45%;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 30px 20px;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+}
