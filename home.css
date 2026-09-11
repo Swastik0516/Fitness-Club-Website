@@ -1,5 +1,5 @@
 .hero {
-    height: 80vh;
+    height: 80.8vh;
     background: grey;
     display: flex;
     align-items: center;
@@ -14,8 +14,8 @@
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
 }
 
 

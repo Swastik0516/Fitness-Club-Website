@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="Contact.css">
+
 </head>
 
 <body>
@@ -24,11 +26,27 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Membership.html">Membership</a></li>
-                <li><a href="Contact.html" class="active">Contact</a></li>
+
+                <li>
+                    <a href="Home.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+
+                <li>
+                    <a href="Services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="Membership.html">Membership</a>
+                </li>
+
+                <li>
+                    <a href="Contact.html" class="active">Contact</a>
+                </li>
+
             </ul>
 
         </nav>
@@ -40,9 +58,15 @@
 
         <section class="contact-section">
 
-            <h1 class="section-title">Contact Us</h1>
+            <h1 class="section-title">
+                Contact Us
+            </h1>
+
 
             <div class="contact-grid">
+
+
+                <!-- Contact Information -->
 
                 <div class="contact-info">
 
@@ -54,41 +78,70 @@
                     </p>
 
                     <p>
-                        <strong>Address:</strong> Fitness Avenue, India
+                        <strong>Address:</strong>
+                        Fitness Avenue, India
                     </p>
 
                     <p>
-                        <strong>Phone:</strong> +91 98765 43210
+                        <strong>Phone:</strong>
+                        +91 98765 43210
                     </p>
 
                     <p>
-                        <strong>Email:</strong> fitclub@gmail.com
+                        <strong>Email:</strong>
+                        fitclub@gmail.com
                     </p>
 
                 </div>
 
 
+                <!-- Contact Form -->
+
                 <div class="contact-form">
 
                     <h2>Send Us a Message</h2>
 
-                    <form>
+                    <form onsubmit="alert('Your message has been sent successfully!'); return false;">
 
-<form>
+                        <label for="name">
+                            Name
+                        </label>
 
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required
+                        >
 
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
 
-    <label for="message">Message</label>
-    <textarea id="message" rows="5"
-        placeholder="Enter your message" required></textarea>
+                        <label for="email">
+                            Email
+                        </label>
 
-    <button type="submit">Send Message</button>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
 
-</form>
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="5"
+                            placeholder="Enter your message"
+                            required
+                        ></textarea>
+
+
+                        <button type="submit">
+                            Send Message
+                        </button>
 
                     </form>
 
@@ -103,9 +156,12 @@
 
     <footer>
 
-        <p>&copy; 2026 FitClub. All rights reserved.</p>
+        <p>
+            &copy; 2026 FitClub. All rights reserved.
+        </p>
 
     </footer>
+
 
 </body>
 
