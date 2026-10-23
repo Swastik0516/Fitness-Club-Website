@@ -1,26 +1,176 @@
+/* ========================================================
+   FitClub - Modern Footer Styling
+   ======================================================== */
+
 footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 28px;
-    margin-top: 0;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    padding: 60px 0 30px 0;
+    margin-top: auto;
 }
 
-footer p {
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Col 1: Brand Info */
+.footer-brand .logo {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.footer-brand p {
     font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 320px;
 }
 
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
 
-/* Responsive for mobile */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-red);
+}
+
+/* Headers */
+.footer-col h4 {
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-red);
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color var(--transition-fast), padding-left var(--transition-fast);
+    display: inline-block;
+}
+
+.footer-links li a:hover {
+    color: var(--accent-red);
+    padding-left: 5px;
+}
+
+/* Hours & Contact List */
+.footer-info-list {
+    list-style: none;
+}
+
+.footer-info-list li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-info-list strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom-links a {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.footer-bottom-links a:hover {
+    color: var(--accent-red);
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+}
 
 @media (max-width: 600px) {
-
     footer {
-        padding: 20px;
+        padding: 45px 0 25px 0;
     }
 
-    footer p {
-        font-size: 12px;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }

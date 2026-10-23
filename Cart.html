@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessClub | Shopping Cart & Checkout</title>
+
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="Cart.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="container navbar">
+            <a href="Home.html" class="logo">
+                Fitness<span>Club</span><span class="logo-dot"></span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="BMI.html">BMI Calculator</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Membership.html">Membership</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="Cart.html" class="cart-link" aria-label="Shopping Cart" style="border-color: var(--accent-red);">
+                    <span>🛒</span>
+                    <span class="cart-badge" id="navCartCount" style="display: none;">0</span>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Page Banner -->
+        <section class="page-banner" style="background: linear-gradient(rgba(10, 10, 13, 0.8), rgba(10, 10, 13, 0.92)), url('https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding: 70px 0; text-align: center; border-bottom: 1px solid var(--border-subtle);">
+            <div class="container">
+                <span class="section-tag">Order Overview</span>
+                <h1 style="font-size: 42px; text-transform: uppercase; margin-bottom: 12px;">Shopping <span>Cart</span></h1>
+                <p style="font-size: 17px; max-width: 650px; margin: 0 auto; color: var(--text-secondary);">
+                    Manage your selected fitness supplements and accessories before proceeding to demonstration checkout.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cart Content Section -->
+        <section class="cart-page-section">
+            <div class="container">
+
+                <!-- 1. EMPTY CART STATE -->
+                <div class="empty-cart-card" id="emptyCartContainer" style="display: none;">
+                    <div class="empty-cart-icon">&#128722;</div>
+                    <h3>Your Shopping Cart is Empty</h3>
+                    <p>Looks like you haven't added any supplements or gear yet. Check out our store to power up your workout routine!</p>
+                    <a href="Shop.html" class="btn">Browse Supplement Shop &rarr;</a>
+                </div>
+
+                <!-- 2. ACTIVE CART STATE -->
+                <div class="cart-layout" id="cartLayoutContainer">
+
+                    <!-- Left: Items List Card -->
+                    <div class="cart-items-card">
+                        <div class="cart-header-row">
+                            <h2>Cart Items</h2>
+                            <span style="font-size: 14px; color: var(--text-muted);">Standard Demo Store</span>
+                        </div>
+
+                        <!-- Injected by cart.js -->
+                        <div id="cartItemsList"></div>
+
+                        <!-- Footer Actions -->
+                        <div class="cart-table-footer">
+                            <a href="Shop.html" class="btn btn-secondary btn-sm">&larr; Continue Shopping</a>
+                            <button type="button" class="btn btn-outline btn-sm" id="clearCartBtn">Clear Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Order Summary Card -->
+                    <div class="order-summary-card">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Items Subtotal:</span>
+                            <span id="cartSubtotal">₹0</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span class="free-shipping-tag">FREE (Club Member)</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Estimated Tax:</span>
+                            <span>Included</span>
+                        </div>
+
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="cartTotal">₹0</span>
+                        </div>
+
+                        <div style="margin-top: 25px;">
+                            <button type="button" class="btn btn-block" id="checkoutBtn">
+                                Proceed to Checkout &rarr;
+                            </button>
+                        </div>
+
+                        <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 15px;">
+                            ℹ Front-end demo checkout. No actual monetary transactions take place.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- DEMO CHECKOUT MODAL -->
+    <div class="checkout-modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="modalCheckoutTitle">
+        <div class="checkout-modal-box">
+            <button type="button" class="modal-close-x" id="closeCheckoutBtn" aria-label="Close checkout">&times;</button>
+
+            <!-- Form View -->
+            <div id="checkoutFormView">
+                <h3 id="modalCheckoutTitle" style="font-size: 24px; text-transform: uppercase; margin-bottom: 8px;">
+                    Demo <span>Checkout</span>
+                </h3>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px;">
+                    Order Total: <strong id="modalOrderTotal" style="color: var(--accent-red); font-size: 18px;">₹0</strong>
+                </p>
+
+                <!-- Demo Notice Alert -->
+                <div style="background-color: rgba(255, 42, 59, 0.1); border: 1px solid var(--accent-red); padding: 14px 16px; border-radius: 6px; margin-bottom: 22px; font-size: 13px; color: #ffb3b8; line-height: 1.5;">
+                    <strong>&#9432; Demonstration Only:</strong> This website does not process real payments.
+                    We do not collect credit card details, CVVs, UPI PINs, or bank passwords.
+                </div>
+
+                <form id="checkoutForm" novalidate>
+                    <div style="margin-bottom: 16px;">
+                        <label for="custName" style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px;">Full Name *</label>
+                        <input type="text" id="custName" placeholder="Enter your full name" required
+                            style="width: 100%; padding: 12px 14px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #fff; font-size: 15px;">
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label for="custEmail" style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px;">Email Address *</label>
+                        <input type="email" id="custEmail" placeholder="e.g. name@example.com" required
+                            style="width: 100%; padding: 12px 14px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #fff; font-size: 15px;">
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label for="custAddress" style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px;">Delivery Address *</label>
+                        <textarea id="custAddress" rows="3" placeholder="Enter your street, city, state, postal code" required
+                            style="width: 100%; padding: 12px 14px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #fff; font-size: 15px; resize: vertical;"></textarea>
+                    </div>
+
+                    <div id="checkoutErrorMsg" style="color: #ff4d5a; font-size: 13px; font-weight: 600; margin-bottom: 14px;"></div>
+
+                    <button type="submit" class="btn btn-block">Place Demo Order</button>
+                </form>
+            </div>
+
+            <!-- Success Confirmation Receipt View -->
+            <div id="checkoutSuccessView" style="display: none;">
+                <div class="confirmation-receipt">
+                    <div class="confirmation-check-icon">&#10003;</div>
+                    <h3 style="font-size: 26px; text-transform: uppercase; margin-bottom: 8px;">Order Confirmed!</h3>
+                    <p style="font-size: 15px; color: var(--text-secondary);">
+                        Thank you for your demo order. Your order summary is shown below:
+                    </p>
+
+                    <div class="receipt-details" id="receiptDetails">
+                        <!-- Filled dynamically by cart.js -->
+                    </div>
+
+                    <p style="font-size: 12px; color: var(--text-muted); font-style: italic; margin-bottom: 25px;">
+                        Note: This is a front-end simulation for the FitnessClub website. No real order or payment was processed.
+                    </p>
+
+                    <a href="Shop.html" class="btn btn-block">Return to Supplement Shop</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
+
+    <!-- Modern Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="Home.html" class="logo">
+                        Fit<span>Club</span><span class="logo-dot"></span>
+                    </a>
+                    <p>
+                        Transform your body and mind with premium fitness facilities,
+                        expert strength coaching, and dedicated community support.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">X</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="BMI.html">BMI Calculator</a></li>
+                        <li><a href="Shop.html">Supplement Shop</a></li>
+                        <li><a href="Membership.html">Membership</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Club Hours</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Monday – Friday:</strong>
+                            <span>6:00 AM – 10:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Saturday:</strong>
+                            <span>7:00 AM – 9:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Sunday:</strong>
+                            <span>8:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Location:</strong>
+                            <span>Fitness Avenue, India</span>
+                        </li>
+                        <li>
+                            <strong>Telephone:</strong>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <strong>Email:</strong>
+                            <span>FitnessClub@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitnessClub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="Membership.html">Terms</a>
+                    <a href="Contact.html">Privacy</a>
+                    <a href="About.html">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Connections -->
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

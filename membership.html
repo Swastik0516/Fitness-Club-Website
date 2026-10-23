@@ -2,147 +2,327 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fitness Club | Membership</title>
+    <title>FitnessClub | Membership Plans & Pricing</title>
 
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="Membership.css">
-
 </head>
 
 <body>
 
+    <!-- Header & Navigation -->
     <header>
-
         <nav class="container navbar">
-
             <a href="Home.html" class="logo">
-                Fit<span>Club</span>
+                Fitness<span>Club</span><span class="logo-dot"></span>
             </a>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="Home.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="About.html">About</a>
-                </li>
-
-                <li>
-                    <a href="Services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="Membership.html" class="active">Membership</a>
-                </li>
-
-                <li>
-                    <a href="Contact.html">Contact</a>
-                </li>
-
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="BMI.html">BMI Calculator</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Membership.html" class="active">Membership</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
 
-        </nav>
+            <div class="nav-actions">
+                <a href="Cart.html" class="cart-link" aria-label="Shopping Cart">
+                    <span>🛒</span>
+                    <span class="cart-badge" id="navCartCount" style="display: none;">0</span>
+                </a>
 
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
     </header>
 
+    <main>
 
-    <main class="container">
+        <!-- Page Banner -->
+        <section class="page-banner" style="background: linear-gradient(rgba(10, 10, 13, 0.8), rgba(10, 10, 13, 0.92)), url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding: 75px 0; text-align: center; border-bottom: 1px solid var(--border-subtle);">
+            <div class="container">
+                <span class="section-tag">Flexible Options</span>
+                <h1 style="font-size: 44px; text-transform: uppercase; margin-bottom: 12px;">Membership <span>Plans</span></h1>
+                <p style="font-size: 17px; max-width: 650px; margin: 0 auto; color: var(--text-secondary);">
+                    Simple, transparent pricing with no hidden registration fees. Pick the plan that matches your training schedule.
+                </p>
+            </div>
+        </section>
 
-        <section class="pricing-section">
+        <!-- Pricing Cards Section -->
+        <section class="pricing-page-section">
+            <div class="container">
 
-            <h2 class="section-title">
-                Membership Plans
-            </h2>
+                <div class="pricing-grid">
 
-            <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card" id="cardBasic">
+                        <h3>Basic</h3>
+                        <p class="price">
+                            ₹2,500<span>/month</span>
+                        </p>
+                        <ul>
+                            <li>Full Gym Floor Access</li>
+                            <li>Free Weights & Resistance Equipment</li>
+                            <li>Day-Use Locker Room & Showers</li>
+                        </ul>
+                        <button type="button" class="btn btn-secondary select-plan-btn" data-plan="Basic" data-price="₹2,500/month">
+                            Select Plan
+                        </button>
+                    </div>
 
-                <!-- Basic Plan -->
-                <div class="pricing-card">
+                    <!-- Premium Plan (Featured / Highlighted) -->
+                    <div class="pricing-card premium" id="cardPremium">
+                        <span class="popular-badge">Most Popular</span>
+                        <h3>Premium</h3>
+                        <p class="price">
+                            ₹3,500<span>/month</span>
+                        </p>
+                        <ul>
+                            <li>All Basic Membership Features</li>
+                            <li>Unlimited Group Fitness Classes</li>
+                            <li>Personal Trainer App Access</li>
+                            <li>Complimentary Fitness Assessment</li>
+                        </ul>
+                        <button type="button" class="btn select-plan-btn" data-plan="Premium" data-price="₹3,500/month">
+                            Select Plan
+                        </button>
+                    </div>
 
-                    <h3>Basic</h3>
-
-                    <p class="price">
-                        ₹2500<span>/month</span>
-                    </p>
-
-                    <ul>
-                        <li>Gym Access</li>
-                        <li>Basic Equipment</li>
-                        <li>Locker Room</li>
-                    </ul>
-
-                    <a href="Contact.html" class="btn">
-                        Select Plan
-                    </a>
+                    <!-- 6 Months Plan -->
+                    <div class="pricing-card" id="card6Months">
+                        <h3>6 Months</h3>
+                        <p class="price">
+                            ₹15,000<span>/6 months</span>
+                        </p>
+                        <ul>
+                            <li>Full Gym & Functional Area Access</li>
+                            <li>All Resistance & Olympic Equipment</li>
+                            <li>Day-Use Locker Room & Showers</li>
+                            <li>All Group Fitness & Yoga Classes</li>
+                            <li>1 Free Diet Consultation Session</li>
+                        </ul>
+                        <button type="button" class="btn btn-secondary select-plan-btn" data-plan="6 Months" data-price="₹15,000/6 months">
+                            Select Plan
+                        </button>
+                    </div>
 
                 </div>
 
+                <!-- Membership FAQ Section -->
+                <div class="membership-faq">
+                    <div class="section-header">
+                        <span class="section-tag">Common Questions</span>
+                        <h2 class="section-title">Membership <span>FAQ</span></h2>
+                    </div>
 
-                <!-- Premium Plan -->
-                <div class="pricing-card premium">
+                    <div class="faq-grid">
+                        <div class="faq-card">
+                            <h4>Is there any initial joining or sign-up fee?</h4>
+                            <p>No, FitnessClub does not charge hidden sign-up or admin charges. What you see on the plan is what you pay.</p>
+                        </div>
 
-                    <h3>Premium</h3>
+                        <div class="faq-card">
+                            <h4>Can I freeze my membership if I travel?</h4>
+                            <p>Yes, members on 6-month plans can freeze their account for up to 30 days with prior notice at our front desk.</p>
+                        </div>
 
-                    <p class="price">
-                        ₹3500<span>/month</span>
-                    </p>
+                        <div class="faq-card">
+                            <h4>Are locker rooms and showers included?</h4>
+                            <p>Yes, all active FitnessClub memberships include access to clean, modern day-use lockers and hot showers.</p>
+                        </div>
 
-                    <ul>
-                        <li>All Basic Features</li>
-                        <li>Group Classes</li>
-                        <li>Personal Trainer App</li>
-                    </ul>
-
-                    <a href="Contact.html" class="btn">
-                        Select Plan
-                    </a>
-
-                </div>
-
-
-                <!-- 6 Months Plan -->
-                <div class="pricing-card">
-
-                    <h3>6 Months</h3>
-
-                    <p class="price">
-                        ₹15000<span>/6 months</span>
-                    </p>
-
-                    <ul>
-                        <li>Gym Access</li>
-                        <li>All Equipment</li>
-                        <li>Locker Room</li>
-                        <li>Group Classes</li>
-                    </ul>
-
-                    <a href="Contact.html" class="btn">
-                        Select Plan
-                    </a>
-
+                        <div class="faq-card">
+                            <h4>How do I finalize my registration?</h4>
+                            <p>Simply select your plan above, then complete your registration details at our front desk or via our Contact page.</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
+    <!-- Membership Confirmation Modal -->
+    <div id="membershipModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalPlanTitle">
+        <div class="modal-box">
+            <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+            <div class="modal-icon">&#10003;</div>
 
+            <h3>Plan Selected!</h3>
+            <p class="modal-plan-name" id="modalPlanTitle">Basic Plan</p>
+            <p class="modal-plan-price" id="modalPlanPrice">₹2,500 / month</p>
+
+            <p class="modal-desc">
+                Great choice! We have marked this plan as your selection.
+                No immediate online payment is required. You can proceed to Contact Us to ask any questions or complete your registration.
+            </p>
+
+            <div class="modal-actions">
+                <a href="Contact.html" class="btn" id="modalProceedBtn">
+                    Proceed to Registration &rarr;
+                </a>
+                <button type="button" class="btn btn-secondary" id="modalCancelBtn">
+                    Choose Another Plan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
+
+    <!-- Modern Footer -->
     <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="Home.html" class="logo">
+                        Fit<span>Club</span><span class="logo-dot"></span>
+                    </a>
+                    <p>
+                        Transform your body and mind with premium fitness facilities,
+                        expert strength coaching, and dedicated community support.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">X</a>
+                    </div>
+                </div>
 
-        <p>&copy; 2026 FitClub. All rights reserved.</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="BMI.html">BMI Calculator</a></li>
+                        <li><a href="Shop.html">Supplement Shop</a></li>
+                        <li><a href="Membership.html">Membership</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
 
+                <div class="footer-col">
+                    <h4>Club Hours</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Monday – Friday:</strong>
+                            <span>6:00 AM – 10:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Saturday:</strong>
+                            <span>7:00 AM – 9:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Sunday:</strong>
+                            <span>8:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Location:</strong>
+                            <span>Fitness Avenue, India</span>
+                        </li>
+                        <li>
+                            <strong>Telephone:</strong>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <strong>Email:</strong>
+                            <span>FitnessClub@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitnessClub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="Membership.html">Terms</a>
+                    <a href="Contact.html">Privacy</a>
+                    <a href="About.html">Support</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript Connection -->
+    <script src="script.js"></script>
+    <script>
+        // Membership Selection Script
+        document.addEventListener('DOMContentLoaded', function () {
+            const planButtons = document.querySelectorAll('.select-plan-btn');
+            const modal = document.getElementById('membershipModal');
+            const modalTitle = document.getElementById('modalPlanTitle');
+            const modalPrice = document.getElementById('modalPlanPrice');
+            const modalProceed = document.getElementById('modalProceedBtn');
+            const modalClose = document.getElementById('modalCloseBtn');
+            const modalCancel = document.getElementById('modalCancelBtn');
+
+            function openModal(name, price) {
+                if (modalTitle) modalTitle.textContent = name + ' Plan';
+                if (modalPrice) modalPrice.textContent = price;
+                if (modalProceed) modalProceed.href = 'Contact.html?plan=' + encodeURIComponent(name);
+                if (modal) {
+                    modal.classList.add('active');
+                    modal.setAttribute('aria-hidden', 'false');
+                }
+            }
+
+            function closeModal() {
+                if (modal) {
+                    modal.classList.remove('active');
+                    modal.setAttribute('aria-hidden', 'true');
+                }
+            }
+
+            planButtons.forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const name = this.getAttribute('data-plan') || 'Basic';
+                    const price = this.getAttribute('data-price') || '₹2,500/month';
+
+                    // Highlight card
+                    document.querySelectorAll('.pricing-card').forEach(c => c.classList.remove('selected'));
+                    const card = this.closest('.pricing-card');
+                    if (card) card.classList.add('selected');
+
+                    openModal(name, price);
+                });
+            });
+
+            if (modalClose) modalClose.addEventListener('click', closeModal);
+            if (modalCancel) modalCancel.addEventListener('click', closeModal);
+
+            if (modal) {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) closeModal();
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

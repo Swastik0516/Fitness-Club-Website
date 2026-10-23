@@ -2,91 +2,371 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fitness Club | Home</title>
+    <title>FitClub | Premier Fitness & Strength Training</title>
 
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="Home.css">
-
 </head>
 
 <body>
 
+    <!-- Header & Navigation -->
     <header>
-
         <nav class="container navbar">
-
             <a href="Home.html" class="logo">
-                Fit<span>Club</span>
+                Fitness<span>Club</span><span class="logo-dot"></span>
             </a>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="Home.html" class="active">Home</a>
-                </li>
-
-                <li>
-                    <a href="About.html">About</a>
-                </li>
-
-                <li>
-                    <a href="Services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="Membership.html">Membership</a>
-                </li>
-
-                <li>
-                    <a href="Contact.html">Contact</a>
-                </li>
-
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Home.html" class="active">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="BMI.html">BMI Calculator</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Membership.html">Membership</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
 
+            <div class="nav-actions">
+                <a href="Cart.html" class="cart-link" aria-label="Shopping Cart">
+                    <span>🛒</span>
+                    <span class="cart-badge" id="navCartCount" style="display: none;">0</span>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
-
     </header>
-
 
     <main>
 
+        <!-- A. HERO SECTION -->
         <section class="hero">
-
-            <div class="hero-content">
-
-                <h1>
-                    Transform Your Body,
-                    <br>
-                    Transform Your Life
+            <div class="container hero-content">
+                <span class="hero-badge">Welcome to FitnessClub Fitness</span>
+                <h1 class="hero-title">
+                    BUILD YOUR <br><span>STRONGER SELF</span>
                 </h1>
-
-                <p>
-                    Join the best fitness club in town and achieve your dream physique.
+                <p class="hero-description">
+                    Transform your body and mind with elite equipment, science-backed personal training,
+                    and a supportive fitness community dedicated to your personal growth.
                 </p>
-
-                <a href="Membership.html" class="btn">
-                    Join Now
-                </a>
-
+                <div class="hero-actions">
+                    <a href="Membership.html" class="btn">Join Now</a>
+                    <a href="Services.html" class="btn btn-secondary">Explore Programs</a>
+                </div>
             </div>
+        </section>
 
+        <!-- B. FITNESS STATISTICS SECTION -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">&#9733;</div>
+                        <h3 class="stat-title">Expert Programs</h3>
+                        <p class="stat-desc">Customized training routines built around your specific fitness level and personal targets.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">&#9670;</div>
+                        <h3 class="stat-title">Multiple Categories</h3>
+                        <p class="stat-desc">Full access to free weights, Olympic lifting platforms, cardio decks, and functional zones.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">&#10004;</div>
+                        <h3 class="stat-title">Flexible Plans</h3>
+                        <p class="stat-desc">Transparent monthly and seasonal memberships with no hidden maintenance fees.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">&#9874;</div>
+                        <h3 class="stat-title">Certified Guidance</h3>
+                        <p class="stat-desc">Experienced trainers ready to guide your lifting form, diet strategies, and motivation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- C. FEATURED SERVICES SECTION -->
+        <section class="featured-services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">What We Offer</span>
+                    <h2 class="section-title">Featured <span>Training Programs</span></h2>
+                    <p class="section-subtitle">
+                        Whether you are beginning your fitness journey or training for advanced strength, our programs deliver results.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Strength Training">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Strength Training</h3>
+                            <p class="service-card-desc">Build progressive muscle, bone density, and power utilizing barbells, dumbbells, and cable systems.</p>
+                            <a href="Services.html" class="service-card-link">Learn More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?auto=format&fit=crop&w=600&q=80" alt="Personal Training">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Personal Training</h3>
+                            <p class="service-card-desc">Work one-on-one with a dedicated coach who creates workouts and nutrition guidance tailored to you.</p>
+                            <a href="Services.html" class="service-card-link">Learn More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Cardio Training">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Cardio Training</h3>
+                            <p class="service-card-desc">Boost your cardiovascular endurance, stamina, and heart health on high-performance commercial equipment.</p>
+                            <a href="Services.html" class="service-card-link">Learn More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Weight Management">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Weight Management</h3>
+                            <p class="service-card-desc">Sustainable weight loss and body composition strategies combining metabolic conditioning with balanced nutrition.</p>
+                            <a href="Services.html" class="service-card-link">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D. FEATURED PRODUCTS SECTION -->
+        <section class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Supplement Shop</span>
+                    <h2 class="section-title">Fuel Your <span>Performance</span></h2>
+                    <p class="section-subtitle">
+                        Explore sample supplements and gym accessories curated to assist your recovery, muscle synthesis, and gym energy.
+                    </p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <span class="product-tag">Protein</span>
+                            <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=500&q=80" alt="100% Whey Gold Protein">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Whey Protein • 1 kg</span>
+                            <h3 class="product-title">100% Whey Gold Protein</h3>
+                            <p class="product-price">₹2,499</p>
+                            <div class="product-actions">
+                                <a href="Shop.html" class="btn btn-sm btn-block">View in Shop</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <span class="product-tag">Strength</span>
+                            <img src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&w=500&q=80" alt="Micronized Creatine Powder">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Creatine • 250g</span>
+                            <h3 class="product-title">Micronized Creatine</h3>
+                            <p class="product-price">₹899</p>
+                            <div class="product-actions">
+                                <a href="Shop.html" class="btn btn-sm btn-block">View in Shop</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <span class="product-tag">Energy</span>
+                            <img src="https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=500&q=80" alt="Ignite Pre-Workout Boost">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Pre-Workout • 300g</span>
+                            <h3 class="product-title">Ignite Pre-Workout</h3>
+                            <p class="product-price">₹1,299</p>
+                            <div class="product-actions">
+                                <a href="Shop.html" class="btn btn-sm btn-block">View in Shop</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <span class="product-tag">Gear</span>
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=500&q=80" alt="Stainless Steel Gym Shaker">
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Accessories • 750ml</span>
+                            <h3 class="product-title">Steel Pro Shaker Bottle</h3>
+                            <p class="product-price">₹499</p>
+                            <div class="product-actions">
+                                <a href="Shop.html" class="btn btn-sm btn-block">View in Shop</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="Shop.html" class="btn btn-outline">Explore All Products &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- E. BMI CALCULATOR PREVIEW SECTION -->
+        <section class="bmi-preview">
+            <div class="container">
+                <div class="bmi-banner">
+                    <div class="bmi-banner-text">
+                        <span class="section-tag">Interactive Fitness Tool</span>
+                        <h2>Calculate Your <span>Body Mass Index</span></h2>
+                        <p>
+                            Curious about where you stand? Our interactive BMI Calculator accurately calculates your
+                            category using both metric and imperial measurements, offering immediate insights into your fitness starting point.
+                        </p>
+                        <a href="BMI.html" class="btn">Calculate Your BMI &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- F. CALL TO ACTION SECTION -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <span class="section-tag">Start Your Transformation</span>
+                    <h2>Ready to Join <span>FitClub?</span></h2>
+                    <p>
+                        No matter where you are starting from, our supportive community, certified coaches,
+                        and top-grade equipment are here to guide you every rep of the way.
+                    </p>
+                    <a href="Membership.html" class="btn">View Membership Plans</a>
+                </div>
+            </div>
         </section>
 
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
 
+    <!-- Modern Footer -->
     <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1 -->
+                <div class="footer-col footer-brand">
+                    <a href="Home.html" class="logo">
+                        Fit<span>Club</span><span class="logo-dot"></span>
+                    </a>
+                    <p>
+                        Transform your body and mind with premium fitness facilities,
+                        expert strength coaching, and dedicated community support.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">X</a>
+                    </div>
+                </div>
 
-        <p>&copy; 2026 FitClub. All rights reserved.</p>
+                <!-- Col 2: Navigation Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="BMI.html">BMI Calculator</a></li>
+                        <li><a href="Shop.html">Supplement Shop</a></li>
+                        <li><a href="Membership.html">Membership</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
 
+                <!-- Col 3: Hours -->
+                <div class="footer-col">
+                    <h4>Club Hours</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Monday – Friday:</strong>
+                            <span>6:00 AM – 10:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Saturday:</strong>
+                            <span>7:00 AM – 9:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Sunday:</strong>
+                            <span>8:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info -->
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Location:</strong>
+                            <span>Fitness Avenue, India</span>
+                        </li>
+                        <li>
+                            <strong>Telephone:</strong>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <strong>Email:</strong>
+                            <span>fitclub@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitClub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="Membership.html">Terms</a>
+                    <a href="Contact.html">Privacy</a>
+                    <a href="About.html">Support</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript Connection -->
+    <script src="script.js"></script>
 </body>
 
 </html>

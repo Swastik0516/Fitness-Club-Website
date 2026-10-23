@@ -1,79 +1,184 @@
-.about-section {
-    min-height: 71.2vh;
-    padding: 40px 0;
+.page-banner {
+    background: linear-gradient(rgba(10, 10, 13, 0.8), rgba(10, 10, 13, 0.92)),
+                url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
-.section-title {
-    font-size: 40px;
-    margin-bottom: 40px;
-    text-align: center;
+.page-banner h1 {
+    font-size: 46px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.page-banner p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+/* About Story Grid */
+.about-story {
+    padding: 90px 0;
 }
 
 .about-grid {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
 }
 
-.about-text {
-    flex: 1;
-}
-
-.about-text h3 {
-    font-size: 35px;
-    color: red;
+.about-text h2 {
+    font-size: 34px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .about-text p {
-    font-size: 20px;
-    line-height: 2;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .about-image {
-    flex: 1;
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-card);
 }
 
 .about-image img {
-    width: 104%;
-    height: 350px;
+    width: 100%;
+    height: 440px;
     object-fit: cover;
-    border-radius: 10px;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
+.about-image:hover img {
+    transform: scale(1.04);
+}
 
-/* Responsive for mobile */
+/* Philosophy / Core Values Grid */
+.philosophy-section {
+    padding: 80px 0;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
 
-@media (max-width: 600px) {
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 
-    .about-section {
-        padding: 30px 20px;
-    }
+.value-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+    padding: 35px 28px;
+    text-align: center;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
 
-    .section-title {
-        font-size: 28px;
-    }
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 42, 59, 0.45);
+}
 
+.value-number {
+    display: inline-block;
+    color: var(--accent-red);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.value-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Facilities Features */
+.facilities-overview {
+    padding: 90px 0 40px 0;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.facility-feature {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.facility-icon {
+    font-size: 28px;
+    color: var(--accent-red);
+    background-color: var(--accent-red-light);
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.facility-info h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.facility-info p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
     .about-grid {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .about-text,
-    .about-image {
-        width: 100%;
-    }
-
-    .about-text h3 {
-        font-size: 25px;
-    }
-
-    .about-text p {
-        font-size: 16px;
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .about-image img {
-        height: 250px;
+        height: 320px;
     }
 
+    .values-grid,
+    .facilities-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-banner h1 {
+        font-size: 32px;
+    }
+
+    .values-grid,
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
 }

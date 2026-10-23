@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fitness Club | Loading</title>
+    <title>FitnessClub | Loading...</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -18,12 +15,12 @@
 
         body {
             height: 100vh;
-            background: #1a1a2e;
+            background: #0a0a0d;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
-            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #ffffff;
         }
 
         .loading-container {
@@ -31,74 +28,72 @@
         }
 
         .loader {
-            width: 120px;
-            height: 120px;
-            border: 8px solid #444;
-            border-top: 8px solid #e63946;
+            width: 110px;
+            height: 110px;
+            border: 6px solid #22222c;
+            border-top: 6px solid #ff2a3b;
             border-radius: 50%;
             position: relative;
-            animation: rotate 2s linear infinite;
+            animation: rotate 1.2s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
             margin: auto;
+            box-shadow: 0 0 25px rgba(255, 42, 59, 0.25);
         }
 
         .ball {
-            width: 20px;
-            height: 20px;
-            background: #e63946;
+            width: 16px;
+            height: 16px;
+            background: #ff2a3b;
             border-radius: 50%;
             position: absolute;
-            top: -14px;
-            left: 42px;
+            top: -11px;
+            left: 41px;
+            box-shadow: 0 0 10px #ff2a3b;
         }
 
         .loading-container h1 {
-            margin-top: 30px;
-            font-size: 32px;
+            margin-top: 32px;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .loading-container h1 span {
+            color: #ff2a3b;
         }
 
         .loading-container p {
-            margin-top: 10px;
-            color: #ccc;
-            font-size: 16px;
+            margin-top: 8px;
+            color: #a0a0ab;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         @keyframes rotate {
-
             from {
                 transform: rotate(0deg);
             }
-
             to {
                 transform: rotate(360deg);
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
     <div class="loading-container">
-
         <div class="loader">
             <div class="ball"></div>
         </div>
-
-        <h1>FitClub Website</h1>
-
-        <p>Loading...</p>
-
+        <h1>Fitness<span>Club</span></h1>
+        <p>Loading Fitness Portal...</p>
     </div>
 
-
     <script>
-
         setTimeout(function() {
-            window.location.href = "Login.html";
+            window.location.href = "Home.html";
         }, 5000);
-
     </script>
 
 </body>

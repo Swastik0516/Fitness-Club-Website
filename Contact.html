@@ -2,167 +2,376 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fitness Club | Contact</title>
+    <title>FitnessClub | Contact Us & Inquiries</title>
 
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="Contact.css">
-
 </head>
 
 <body>
 
+    <!-- Header & Navigation -->
     <header>
-
         <nav class="container navbar">
-
             <a href="Home.html" class="logo">
-                Fit<span>Club</span>
+                Fitness<span>Club</span><span class="logo-dot"></span>
             </a>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="Home.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="About.html">About</a>
-                </li>
-
-                <li>
-                    <a href="Services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="Membership.html">Membership</a>
-                </li>
-
-                <li>
-                    <a href="Contact.html" class="active">Contact</a>
-                </li>
-
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="BMI.html">BMI Calculator</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Membership.html">Membership</a></li>
+                <li><a href="Contact.html" class="active">Contact</a></li>
             </ul>
 
+            <div class="nav-actions">
+                <a href="Cart.html" class="cart-link" aria-label="Shopping Cart">
+                    <span>🛒</span>
+                    <span class="cart-badge" id="navCartCount" style="display: none;">0</span>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
-
     </header>
-
 
     <main>
 
-        <section class="contact-section">
-
-            <h1 class="section-title">
-                Contact Us
-            </h1>
-
-
-            <div class="contact-grid">
-
-
-                <!-- Contact Information -->
-
-                <div class="contact-info">
-
-                    <h2>Get In Touch</h2>
-
-                    <p>
-                        Have questions about our gym or membership plans?
-                        Contact us and we will be happy to help.
-                    </p>
-
-                    <p>
-                        <strong>Address:</strong>
-                        Fitness Avenue, India
-                    </p>
-
-                    <p>
-                        <strong>Phone:</strong>
-                        +91 98765 43210
-                    </p>
-
-                    <p>
-                        <strong>Email:</strong>
-                        fitclub@gmail.com
-                    </p>
-
-                </div>
-
-
-                <!-- Contact Form -->
-
-                <div class="contact-form">
-
-                    <h2>Send Us a Message</h2>
-
-                    <form onsubmit="alert('Your message has been sent successfully!'); return false;">
-
-                        <label for="name">
-                            Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="Enter your name"
-                            required
-                        >
-
-
-                        <label for="email">
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Enter your email"
-                            required
-                        >
-
-
-                        <label for="message">
-                            Message
-                        </label>
-
-                        <textarea
-                            id="message"
-                            rows="5"
-                            placeholder="Enter your message"
-                            required
-                        ></textarea>
-
-
-                        <button type="submit">
-                            Send Message
-                        </button>
-
-                    </form>
-
-                </div>
-
+        <!-- Page Banner -->
+        <section class="page-banner" style="background: linear-gradient(rgba(10, 10, 13, 0.8), rgba(10, 10, 13, 0.92)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding: 75px 0; text-align: center; border-bottom: 1px solid var(--border-subtle);">
+            <div class="container">
+                <span class="section-tag">Direct Communication</span>
+                <h1 style="font-size: 44px; text-transform: uppercase; margin-bottom: 12px;">Contact <span>FitnessClub</span></h1>
+                <p style="font-size: 17px; max-width: 650px; margin: 0 auto; color: var(--text-secondary);">
+                    Have questions about membership plans, training programs, or supplement orders? Reach out to our team.
+                </p>
             </div>
+        </section>
 
+        <!-- Contact Form & Info Section -->
+        <section class="contact-page-section">
+            <div class="container">
+                <div class="contact-layout">
+
+                    <!-- Left: Contact Details Card -->
+                    <div class="contact-info-card">
+                        <span class="section-tag">Reach Our Team</span>
+                        <h2>Get In <span>Touch</span></h2>
+                        <p>
+                            We are here to answer your fitness questions, schedule your facility tour,
+                            or help you select the ideal membership tier.
+                        </p>
+
+                        <div class="contact-detail-items">
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">&#128205;</div>
+                                <div class="contact-detail-text">
+                                    <h4>Club Location</h4>
+                                    <p>Fitness Avenue, India</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">&#128222;</div>
+                                <div class="contact-detail-text">
+                                    <h4>Direct Telephone</h4>
+                                    <p>+91 98765 43210</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">&#9993;</div>
+                                <div class="contact-detail-text">
+                                    <h4>Official Email</h4>
+                                    <p>FitnessClub@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">&#9200;</div>
+                                <div class="contact-detail-text">
+                                    <h4>Operating Hours</h4>
+                                    <p>Mon–Fri: 6:00 AM – 10:00 PM<br>Sat: 7:00 AM – 9:00 PM<br>Sun: 8:00 AM – 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form Card -->
+                    <div class="contact-form-card">
+                        <h2>Send Us a <span>Message</span></h2>
+                        <p>Fill out the form below and we will get back to your inquiry promptly.</p>
+
+                        <!-- Dynamic Success Box -->
+                        <div id="contactSuccessBox" class="contact-success-box" role="status" aria-live="polite"></div>
+
+                        <form id="contactForm" novalidate>
+                            <!-- Name -->
+                            <div class="form-group" id="nameGroup">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" placeholder="Enter your full name" required>
+                                <span class="field-error-msg" id="nameError"></span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group" id="emailGroup">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" placeholder="e.g. name@example.com" required>
+                                <span class="field-error-msg" id="emailError"></span>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="form-group" id="subjectGroup">
+                                <label for="contactSubject">Subject *</label>
+                                <select id="contactSubject">
+                                    <option value="General Inquiry">General Club Inquiry</option>
+                                    <option value="Membership Enrollment">Membership Enrollment</option>
+                                    <option value="Personal Training Inquiry">Personal Training Session</option>
+                                    <option value="Supplement Shop Question">Supplement Shop Question</option>
+                                    <option value="Facility Tour Request">Facility Tour Request</option>
+                                </select>
+                                <span class="field-error-msg" id="subjectError"></span>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group" id="messageGroup">
+                                <label for="contactMessage">Your Message *</label>
+                                <textarea id="contactMessage" rows="5" placeholder="Tell us how we can help with your fitness journey..." required></textarea>
+                                <span class="field-error-msg" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-block" id="contactSubmitBtn">
+                                Send Message &rarr;
+                            </button>
+                        </form>
+
+                        <p class="demo-form-notice" style="margin-top: 20px;">
+                            ℹ Frontend Demonstration: Client-side validation checks all fields. Because this website has no server backend, no actual email will be transmitted.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
 
+    <!-- Modern Footer -->
     <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="Home.html" class="logo">
+                        Fit<span>Club</span><span class="logo-dot"></span>
+                    </a>
+                    <p>
+                        Transform your body and mind with premium fitness facilities,
+                        expert strength coaching, and dedicated community support.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">X</a>
+                    </div>
+                </div>
 
-        <p>
-            &copy; 2026 FitClub. All rights reserved.
-        </p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="BMI.html">BMI Calculator</a></li>
+                        <li><a href="Shop.html">Supplement Shop</a></li>
+                        <li><a href="Membership.html">Membership</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
 
+                <div class="footer-col">
+                    <h4>Club Hours</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Monday – Friday:</strong>
+                            <span>6:00 AM – 10:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Saturday:</strong>
+                            <span>7:00 AM – 9:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Sunday:</strong>
+                            <span>8:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Location:</strong>
+                            <span>Fitness Avenue, India</span>
+                        </li>
+                        <li>
+                            <strong>Telephone:</strong>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <strong>Email:</strong>
+                            <span>FitnessClub@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitnessClub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="Membership.html">Terms</a>
+                    <a href="Contact.html">Privacy</a>
+                    <a href="About.html">Support</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript Connections -->
+    <script src="script.js"></script>
+    <script>
+        // Contact Form Validation & URL Parameter Handler
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const nameInput = document.getElementById('contactName');
+            const emailInput = document.getElementById('contactEmail');
+            const subjectSelect = document.getElementById('contactSubject');
+            const messageInput = document.getElementById('contactMessage');
+            const successBox = document.getElementById('contactSuccessBox');
 
+            const nameGroup = document.getElementById('nameGroup');
+            const emailGroup = document.getElementById('emailGroup');
+            const messageGroup = document.getElementById('messageGroup');
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const messageError = document.getElementById('messageError');
+
+            // Pre-fill query parameters if coming from Membership or Services
+            const urlParams = new URLSearchParams(window.location.search);
+            const planParam = urlParams.get('plan');
+            const serviceParam = urlParams.get('service');
+
+            if (planParam) {
+                subjectSelect.value = 'Membership Enrollment';
+                messageInput.value = `Hello FitnessClub team, I would like to enroll in the ${planParam} membership plan. Please guide me through the registration steps.`;
+            } else if (serviceParam) {
+                subjectSelect.value = 'Personal Training Inquiry';
+                messageInput.value = `Hello FitnessClub team, I am interested in booking a session for ${serviceParam}. Please let me know available training slots.`;
+            }
+
+            function setError(group, errSpan, msg) {
+                if (group) group.classList.add('has-error');
+                if (errSpan) errSpan.textContent = msg;
+            }
+
+            function clearError(group, errSpan) {
+                if (group) group.classList.remove('has-error');
+                if (errSpan) errSpan.textContent = '';
+            }
+
+            // Real-time error clearing
+            if (nameInput) nameInput.addEventListener('input', () => clearError(nameGroup, nameError));
+            if (emailInput) emailInput.addEventListener('input', () => clearError(emailGroup, emailError));
+            if (messageInput) messageInput.addEventListener('input', () => clearError(messageGroup, messageError));
+
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const name = nameInput.value.trim();
+                    const email = emailInput.value.trim();
+                    const subject = subjectSelect.value;
+                    const message = messageInput.value.trim();
+
+                    let hasErrors = false;
+
+                    // 1. Validate Name
+                    if (!name) {
+                        setError(nameGroup, nameError, 'Please enter your full name.');
+                        hasErrors = true;
+                    } else if (name.length < 2) {
+                        setError(nameGroup, nameError, 'Name must be at least 2 characters long.');
+                        hasErrors = true;
+                    } else {
+                        clearError(nameGroup, nameError);
+                    }
+
+                    // 2. Validate Email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email) {
+                        setError(emailGroup, emailError, 'Please enter your email address.');
+                        hasErrors = true;
+                    } else if (!emailRegex.test(email)) {
+                        setError(emailGroup, emailError, 'Please enter a valid email format (e.g. name@example.com).');
+                        hasErrors = true;
+                    } else {
+                        clearError(emailGroup, emailError);
+                    }
+
+                    // 3. Validate Message
+                    if (!message) {
+                        setError(messageGroup, messageError, 'Please enter your message.');
+                        hasErrors = true;
+                    } else if (message.length < 10) {
+                        setError(messageGroup, messageError, 'Message must be at least 10 characters long.');
+                        hasErrors = true;
+                    } else {
+                        clearError(messageGroup, messageError);
+                    }
+
+                    if (hasErrors) {
+                        if (nameGroup.classList.contains('has-error')) nameInput.focus();
+                        else if (emailGroup.classList.contains('has-error')) emailInput.focus();
+                        else if (messageGroup.classList.contains('has-error')) messageInput.focus();
+                        return;
+                    }
+
+                    // Success Feedback Display
+                    if (successBox) {
+                        const safeName = document.createTextNode(name).wholeText;
+                        const safeEmail = document.createTextNode(email).wholeText;
+                        const safeSubject = document.createTextNode(subject).wholeText;
+
+                        successBox.innerHTML = `
+                            <h3>&#10003; Message Received Successfully!</h3>
+                            <p>Thank you, <strong>${safeName}</strong>. Your inquiry regarding <strong>${safeSubject}</strong> has been logged.</p>
+                            <p>Our team will get back to you at <strong>${safeEmail}</strong> shortly.</p>
+                            <p class="demo-form-notice">Note: This is a front-end demonstration without a backend server; no external email was dispatched.</p>
+                        `;
+                        successBox.classList.add('show');
+                        successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+
+                    form.reset();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

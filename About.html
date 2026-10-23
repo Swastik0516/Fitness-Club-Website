@@ -2,103 +2,375 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fitness Club | About</title>
+    <title>FitnessClub | About Us & Gym Equipment</title>
 
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="About.css">
-
+    <link rel="stylesheet" href="AboutEquipment.css">
 </head>
 
 <body>
 
+    <!-- Header & Navigation -->
     <header>
-
         <nav class="container navbar">
-
             <a href="Home.html" class="logo">
-                Fit<span>Club</span>
+                Fitness<span>Club</span><span class="logo-dot"></span>
             </a>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="Home.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="About.html" class="active">About</a>
-                </li>
-
-                <li>
-                    <a href="Services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="Membership.html">Membership</a>
-                </li>
-
-                <li>
-                    <a href="Contact.html">Contact</a>
-                </li>
-
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html" class="active">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="BMI.html">BMI Calculator</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Membership.html">Membership</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
 
-        </nav>
+            <div class="nav-actions">
+                <a href="Cart.html" class="cart-link" aria-label="Shopping Cart">
+                    <span>🛒</span>
+                    <span class="cart-badge" id="navCartCount" style="display: none;">0</span>
+                </a>
 
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
     </header>
 
+    <main>
 
-    <main class="container">
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <span class="section-tag">Who We Are</span>
+                <h1>About <span>FitClub</span></h1>
+                <p>
+                    Committed to empowering individuals through disciplined strength training,
+                    evidence-based coaching, and world-class athletic facilities.
+                </p>
+            </div>
+        </section>
 
-        <section class="about-section">
+        <!-- About Story & Mission -->
+        <section class="about-story">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="section-tag">Our Mission & Identity</span>
+                        <h2>Dedicated to Your <span>Health & Strength</span></h2>
+                        <p>
+                            At FitClub, we believe fitness is not a seasonal resolution—it is a lifelong foundation for vitality,
+                            confidence, and longevity. We was founded with a straightforward mission: to deliver an inspiring,
+                            uncluttered fitness environment where newcomers and competitive lifters alike receive genuine support.
+                        </p>
+                        <p>
+                            From our hand-picked commercial strength stations to our certified coaching staff, every detail
+                            at FitClub is organized to give you an effective, safe, and motivating training experience.
+                        </p>
+                        <div style="margin-top: 30px;">
+                            <a href="Membership.html" class="btn">Explore Memberships</a>
+                        </div>
+                    </div>
 
-            <h2 class="section-title">
-                About Us
-            </h2>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80"
+                            alt="Spacious, clean modern gym training floor">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <div class="about-grid">
-
-                <div class="about-text">
-
-                    <h3>
-                        Our Mission
-                    </h3>
-
-                    <p>
-                        We are dedicated to helping our community live healthier,
-                        happier lives through fitness, expert guidance, and a
-                        supportive environment.
+        <!-- Core Philosophy / Values -->
+        <section class="philosophy-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Core Values</span>
+                    <h2 class="section-title">The FitClub <span>Philosophy</span></h2>
+                    <p class="section-subtitle">
+                        Three foundational principles that shape our programming, equipment selection, and club culture.
                     </p>
-
                 </div>
 
-<div class="about-image">
+                <div class="values-grid">
+                    <div class="value-card">
+                        <span class="value-number">01</span>
+                        <h3>Science-Backed Training</h3>
+                        <p>We emphasize biomechanically sound form, structured progressive overload, and intelligent recovery protocols over fitness fads.</p>
+                    </div>
 
-    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80"
-        alt="Gym Interior">
+                    <div class="value-card">
+                        <span class="value-number">02</span>
+                        <h3>Inclusive & Motivating</h3>
+                        <p>Every person walking through our doors receives respectful, encouraging guidance regardless of their current athletic starting line.</p>
+                    </div>
 
-</div>
+                    <div class="value-card">
+                        <span class="value-number">03</span>
+                        <h3>Clean, Safe Facilities</h3>
+                        <p>Continuous sanitization, meticulous equipment servicing, and shock-absorbing flooring provide peace of mind during your hardest reps.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
+        <!-- Training Facilities Overview -->
+        <section class="facilities-overview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Facility Standards</span>
+                    <h2 class="section-title">Engineered for <span>Peak Performance</span></h2>
+                    <p class="section-subtitle">
+                        Every square foot of FitClub is built with high-grade materials to support serious training.
+                    </p>
+                </div>
+
+                <div class="facilities-grid">
+                    <div class="facility-feature">
+                        <div class="facility-icon">&#127947;</div>
+                        <div class="facility-info">
+                            <h3>Olympic Weight Platforms</h3>
+                            <p>Deadlift platforms with dense rubber tiles to preserve barbells and dampen vibration.</p>
+                        </div>
+                    </div>
+
+                    <div class="facility-feature">
+                        <div class="facility-icon">&#10052;</div>
+                        <div class="facility-info">
+                            <h3>Climate Controlled</h3>
+                            <p>Optimal indoor air filtration and climate regulation to keep training spaces fresh and energizing.</p>
+                        </div>
+                    </div>
+
+                    <div class="facility-feature">
+                        <div class="facility-icon">&#128274;</div>
+                        <div class="facility-info">
+                            <h3>Locker & Shower Amenities</h3>
+                            <p>Secure day-use lockers and hot showers so you can head straight to work or home refreshed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8-ITEM GYM EQUIPMENT GALLERY -->
+        <section class="equipment-gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">World-Class Gear</span>
+                    <h2 class="section-title">Our Gym <span>Equipment Gallery</span></h2>
+                    <p class="section-subtitle">
+                        Take a look at the commercial-grade equipment and training zones available for all FitClub members.
+                    </p>
+                </div>
+
+                <div class="equipment-grid">
+
+                    <!-- 1. Dumbbells and Weight Plates -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Free Weights</span>
+                            <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=700&q=80"
+                                alt="Ergonomic dumbbells and cast-iron weight plates on gym rack">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Dumbbells & Plates</h3>
+                            <p>Hex and urethane dumbbells from 2.5 kg up to 50 kg alongside precision calibrated Olympic weight plates.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Barbells -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Strength</span>
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=700&q=80"
+                                alt="Olympic barbell loaded with bumper plates on lifting platform">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Barbells & Bumper Plates</h3>
+                            <p>Hardened chrome Olympic bars, EZ curl bars, and high-density bumper plates for deadlifts and cleans.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Treadmills -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Cardio</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9kkHYiKIdPKxeEW8qsS5oOJMnBv9Imr-C-5agfcJN2Q&s=10"
+                                alt="Row of commercial electronic treadmills in cardio zone">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Treadmills & Running Decks</h3>
+                            <p>Commercial motorized treadmills featuring incline adjustments, shock cushioning, and heart-rate monitors.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Exercise Bikes -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Endurance</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaDb9lfWBC_e2Iw9sJPOl9F96wx0ivd-v_GclVOCs-Uw&s=10"
+                                alt="Stationary exercise bikes and spin cycle equipment in gym">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Exercise Bikes & Spinners</h3>
+                            <p>Precision magnetic resistance stationary bikes and air assault bikes for low-impact cardio intervals.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Squat Racks -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Power Cages</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1IDC4a50lfFhEtKUzNP-0fAAq8UtP_1Kli0rBX9pMLg&s=10"
+                                alt="Heavy gauge steel power squat rack with safety arms">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Squat Racks & Power Cages</h3>
+                            <p>Reinforced steel cages equipped with safety spotter arms, multi-grip pull-up bars, and j-cups for secure squats.</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Weight Machines -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Resistance</span>
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=80"
+                                alt="Pin-selected weight machines and cable crossover station">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Pin-Loaded Weight Machines</h3>
+                            <p>Selectorized cable towers, lat pulldowns, leg press machines, and chest presses for targeted muscle isolation.</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Gym Benches -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Lifting Benches</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt2kiE6_lOxkha4VqDaamOS8Nak3DLXavJNYBUxJif3Q&s=10"
+                                alt="Adjustable incline, flat, and decline workout benches">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Adjustable Gym Benches</h3>
+                            <p>Commercial incline, decline, and flat benches upholstered with tear-resistant, high-grip padding.</p>
+                        </div>
+                    </div>
+
+                    <!-- 8. Modern Gym Interiors -->
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <span class="equipment-tag">Facility</span>
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=80"
+                                alt="Panoramic view of clean, modern, spacious fitness facility interior">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Modern Gym Interior</h3>
+                            <p>Brightly lit training arena with dedicated functional turf, rubber acoustic flooring, and spacious aisles.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
 
+    <!-- Modern Footer -->
     <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="Home.html" class="logo">
+                        Fit<span>Club</span><span class="logo-dot"></span>
+                    </a>
+                    <p>
+                        Transform your body and mind with premium fitness facilities,
+                        expert strength coaching, and dedicated community support.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">X</a>
+                    </div>
+                </div>
 
-        <p>
-            &copy; 2026 FitClub. All rights reserved.
-        </p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="BMI.html">BMI Calculator</a></li>
+                        <li><a href="Shop.html">Supplement Shop</a></li>
+                        <li><a href="Membership.html">Membership</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
 
+                <div class="footer-col">
+                    <h4>Club Hours</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Monday – Friday:</strong>
+                            <span>6:00 AM – 10:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Saturday:</strong>
+                            <span>7:00 AM – 9:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>Sunday:</strong>
+                            <span>8:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-info-list">
+                        <li>
+                            <strong>Location:</strong>
+                            <span>Fitness Avenue, India</span>
+                        </li>
+                        <li>
+                            <strong>Telephone:</strong>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <strong>Email:</strong>
+                            <span>fitclub@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitClub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="Membership.html">Terms</a>
+                    <a href="Contact.html">Privacy</a>
+                    <a href="About.html">Support</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript Connection -->
+    <script src="script.js"></script>
 </body>
 
 </html>
